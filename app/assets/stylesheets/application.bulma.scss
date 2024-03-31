@@ -36,4 +36,10 @@
 // @import "bulma/sass/layout/hero.sass";
 // @import "bulma/sass/layout/section.sass";
 
-@import 'bulma/bulma';
+// なぜかデフォルトで作られる
+// @import 'bulma/bulma.scss`;
+// だと.block クラスなどが生成されない。@useを使うとうまくいくので@useにする
+@use 'bulma/bulma.scss';
+
+
+// @import "https://cdn.jsdelivr.net/npm/bulma@1.0.0/css/bulma.min.css";
