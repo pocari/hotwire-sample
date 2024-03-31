@@ -3,7 +3,7 @@ class ChicksController < ApplicationController
 
   # GET /chicks
   def index
-    @chicks = Chick.all
+    @chicks = Chick.page(params[:page])
   end
 
   # GET /chicks/1

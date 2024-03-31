@@ -11,6 +11,30 @@
   </head>
 
   <body>
-    <%= yield %>
+    <section class="columns is-fullheigth">
+      <aside class="column is-2 is-narrow-mobile is-fullheight section is-hidden-mobile">
+        <p class="menu-label is-hidden-touch">Navigation</p>
+        <ul class="menu-list">
+          <li>
+            <%= sidebar_link_to(cats_path, "🐱", "ねこ") %>
+          </li>
+          <li>
+            <%= sidebar_link_to(dogs_path, "🐕", "いぬ") %>
+          </li>
+          <li>
+            <%= sidebar_link_to(chicks_path, "🐤", "ひよこ") %>
+          </li>
+          <li>
+            <%= sidebar_link_to(hedgehogs_path, "🦔", "はりねずみ") %>
+          </li>
+          <li>
+            <%= sidebar_link_to(owls_path, "🦉", "ふくろう") %>
+          </li>
+        </ul>
+      </aside>
+      <div class="container column is-10">
+        <%= yield %>
+      </div>
+    </section>
   </body>
 </html>

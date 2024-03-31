@@ -1,12 +1,13 @@
-<div id="<%= dom_id chick %>">
-  <p>
-    <strong>Name:</strong>
+<tr>
+  <td>
     <%= chick.name %>
-  </p>
-
-  <p>
-    <strong>Age:</strong>
+  </td>
+  <td>
     <%= chick.age %>
-  </p>
-
-</div>
+  </td>
+  <td>
+    <p>
+    <%= link_to "Show this chick", chick %>
+    </p>
+  </td>
+</tr>

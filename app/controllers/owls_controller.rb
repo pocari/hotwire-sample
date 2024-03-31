@@ -3,7 +3,7 @@ class OwlsController < ApplicationController
 
   # GET /owls
   def index
-    @owls = Owl.all
+    @owls = Owl.page(params[:page])
   end
 
   # GET /owls/1

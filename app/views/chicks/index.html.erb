@@ -1,14 +1,30 @@
-<p style="color: green"><%= notice %></p>
+<section class="section">
+  <div class="container">
+    <p style="color: green"><%= notice %></p>
 
-<h1>Chicks</h1>
+    <div class="title">
+      <h1>Chicks</h1>
+    </div>
 
-<div id="chicks">
-  <% @chicks.each do |chick| %>
-    <%= render chick %>
-    <p>
-      <%= link_to "Show this chick", chick %>
-    </p>
-  <% end %>
-</div>
+    <div id="chicks">
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @chicks.each do |chick| %>
+            <%= render chick %>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
 
-<%= link_to "New chick", new_chick_path %>
+    <%= paginate @chicks %>
+
+    <%= link_to "New chick", new_chick_path %>
+  </div>
+</section>

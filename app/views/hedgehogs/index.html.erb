@@ -1,14 +1,30 @@
-<p style="color: green"><%= notice %></p>
+<section class="section">
+  <div class="container">
+    <p style="color: green"><%= notice %></p>
 
-<h1>Hedgehogs</h1>
+    <div class="title">
+      <h1>Hedgehogs</h1>
+    </div>
 
-<div id="hedgehogs">
-  <% @hedgehogs.each do |hedgehog| %>
-    <%= render hedgehog %>
-    <p>
-      <%= link_to "Show this hedgehog", hedgehog %>
-    </p>
-  <% end %>
-</div>
+    <div id="hedgehogs">
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @hedgehogs.each do |hedgehog| %>
+            <%= render hedgehog %>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
 
-<%= link_to "New hedgehog", new_hedgehog_path %>
+    <%= paginate @hedgehogs %>
+
+    <%= link_to "New hedgehog", new_hedgehog_path %>
+  </div>
+</section>

@@ -3,7 +3,7 @@ class HedgehogsController < ApplicationController
 
   # GET /hedgehogs
   def index
-    @hedgehogs = Hedgehog.all
+    @hedgehogs = Hedgehog.page(params[:page])
   end
 
   # GET /hedgehogs/1
