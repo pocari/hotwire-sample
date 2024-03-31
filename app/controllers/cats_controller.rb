@@ -10,6 +10,7 @@ class CatsController < ApplicationController
 
   # GET /cats/1
   def show
+    render :edit
   end
 
   # GET /cats/new
